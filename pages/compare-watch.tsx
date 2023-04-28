@@ -12,6 +12,7 @@ type FormValues = {
   lastName: string;
 };
 
+//renders on hook/component level
 const UseWatchInput = () => {
   const { register } = useFormContext<FormValues>();
   useWatch<FormValues>({ name: 'lastName' });
@@ -24,6 +25,7 @@ const UseWatchInput = () => {
   );
 };
 
+//renders on root level
 const WatchInput = () => {
   const { register, watch } = useFormContext<FormValues>();
   watch('firstName');
@@ -64,6 +66,7 @@ const WatchExample = () => {
 
 const UseWatchExample = () => {
   const formMethods = useForm<FormValues>();
+  s;
   const { handleSubmit } = formMethods;
 
   methodWatchFormRenderCount++;
@@ -86,7 +89,7 @@ const UseWatchExample = () => {
   );
 };
 
-//Root component
+//root component
 let hookWatchFormRenderCount = 0;
 let methodWatchFormRenderCount = 0;
 

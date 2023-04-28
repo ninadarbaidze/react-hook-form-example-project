@@ -1,7 +1,13 @@
 import React from 'react';
-import { useFormContext } from 'react-hook-form';
+import { UseFieldArrayRemove, useFormContext } from 'react-hook-form';
 
-const SkillsArray = ({ index, remove }) => {
+const SkillsArray = ({
+  index,
+  remove,
+}: {
+  index: number;
+  remove: UseFieldArrayRemove;
+}) => {
   const { register } = useFormContext();
 
   return (
