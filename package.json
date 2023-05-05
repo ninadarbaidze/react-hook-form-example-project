@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@chakra-ui/core": "^0.8.0",
     "@hookform/error-message": "^2.0.1",
     "@types/node": "18.11.9",
     "@types/react": "18.0.25",
@@ -21,6 +22,7 @@
     "typescript": "4.8.4"
   },
   "devDependencies": {
+    "@types/react-datepicker": "^4.11.2",
     "@typescript-eslint/eslint-plugin": "^5.42.1",
     "@typescript-eslint/parser": "^5.42.1",
     "autoprefixer": "^10.4.13",

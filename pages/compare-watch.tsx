@@ -40,6 +40,9 @@ const WatchInput = () => {
 
 const onSubmit: SubmitHandler<FormValues> = (data) => console.log(data);
 
+let hookWatchFormRenderCount = 0;
+let methodWatchFormRenderCount = 0;
+
 const WatchExample = () => {
   const form = useForm<FormValues>();
   const { handleSubmit } = form;
@@ -66,7 +69,6 @@ const WatchExample = () => {
 
 const UseWatchExample = () => {
   const formMethods = useForm<FormValues>();
-  s;
   const { handleSubmit } = formMethods;
 
   methodWatchFormRenderCount++;
@@ -90,8 +92,6 @@ const UseWatchExample = () => {
 };
 
 //root component
-let hookWatchFormRenderCount = 0;
-let methodWatchFormRenderCount = 0;
 
 const CompareWatch = () => (
   <main className='flex flex-col items-center justify-center gap-4 mt-24'>
